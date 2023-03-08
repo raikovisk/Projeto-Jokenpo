@@ -1,0 +1,59 @@
+.menu1 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* #fond{
+      
+    }
+     */
+.navbar {
+  border-radius: 15px;
+  z-index: 3;
+  justify-content: center;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0 0;
+}
+
+.navbar-default .navbar-collapse {
+  padding-right: 0px;
+  padding-left: 0px;
+  float: right;
+}
+
+.navbar-nav {
+  float: right;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.navbar-nav li {
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.navbar-nav li a {
+  color: rgb(33, 37, 41) !important;
+}
+
+nav.couleur {
+  background-color: rgb(33, 37, 41);
+  padding: 5px 0;
+}
+
+nav.couleur a {
+  color: skyblue !important;
+}
+
+.navPlacar {
+  display: flex;
+  align-items: center;
+}
+

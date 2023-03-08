@@ -1,90 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
     <title>Projeto Jokenpô</title>
-</head>
-<body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">JOKENPÔ</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="fond">
+      <div class="col-md-12 menu1">
+        <nav class="navbar navbar-default" id="menu" role="navigation">
+          <div class="navbar-header navbar navbar-dark bg-dark">
+            <div class="badge text-bg-dark sr-only">
+              <h3>Placar</h3>
+              <span>Player: 0</span>
+              <span>Robô: 0</span>
             </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#game">Jogar</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">Regras</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contatos</a>
-                </li>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
 
-    <img class="cover img-fluid" src="./imgs/d4193794bdf803f776d42d4023a7cf44.jpg" alt="hands jokenpo">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <img
+      class="cover img-fluid"
+      src="./imgs/d4193794bdf803f776d42d4023a7cf44.jpg"
+      alt="hands jokenpo"
+    />
     <h1>Welcome to Jokenpô</h1>
 
     <div class="container">
-        <div id="game" class="divGame">
-
-            <div id="formGame" class="cardBox gap-3 list-group-item list-group-item-light">
-                <div class="card-body">
-                    <div class="card">
-                        <input id="btnStone" class="button btn btn-outline-dark" src="./imgs/pedra.png" alt="punhofechado" type="image">
-                        <input type="radio" class="form-check-input" name="rad" id="radStone"><strong>Pedra</strong>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card">
-                        <input id="btnPapper" class="button btn btn-outline-warning" src="./imgs/papel.png" alt="mão aberta" type="image">
-                        <input type="radio" class="form-check-input" name="rad" id="radPapper"><strong>Papel</strong>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card">
-                        <input id="btnSciss" class="button btn btn-outline-danger" src="./imgs/tesoura.png" alt="dedos abertos em tesoura" type="image">
-                        <input type="radio" class="form-check-input" name="rad" id="radSciss"><strong>Tesoura</strong>
-                    </div>
-                </div>
-    
-                <button id="btnPlay" type="button" class="btn btn-danger">Jogar</button>
+      <div id="game" class="divGame">
+        <div
+          id="formGame"
+          class="cardBox gap-3 list-group-item list-group-item-light"
+        >
+          <div class="card-body">
+            <div class="card">
+              <input
+                id="btnStone"
+                class="button btn btn-outline-dark"
+                src="./imgs/pedra.png"
+                alt="punhofechado"
+                type="image"
+              />
+              <input
+                type="radio"
+                class="form-check"
+                name="rad"
+                id="radStone"
+              /><strong>Pedra</strong>
             </div>
-
-            <div class="panelResult">
-                <div id="divResult">
-                    <h2>Robo</h2>
-                    
-                    <span id="placar"><strong>PLACAR</strong> </span>
-                </div>
+          </div>
+          <div class="card-body">
+            <div class="card">
+              <input
+                id="btnPapper"
+                class="button btn btn-outline-warning"
+                src="./imgs/papel.png"
+                alt="mão aberta"
+                type="image"
+              />
+              <input
+                type="radio"
+                class="form-check"
+                name="rad"
+                id="radPapper"
+              /><strong>Papel</strong>
             </div>
-
+          </div>
+          <div class="card-body">
+            <div class="card">
+              <input
+                id="btnSciss"
+                class="button btn btn-outline-danger"
+                src="./imgs/tesoura.png"
+                alt="dedos abertos em tesoura"
+                type="image"
+              />
+              <input
+                type="radio"
+                class="form-check"
+                name="rad"
+                id="radSciss"
+              /><strong>Tesoura</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="divFooter">
-            <div id="about">
-                <h2>Regras</h2>
-                <p class="p-4"><strong>Caso você não saiba, jokenpô é um jogo em que as pessoas jogam com as mãos, escolhendo entre pedra, papel e tesoura. </strong> Funciona assim: a tesoura corta o papel, mas quebra com a pedra; o papel embrulha a pedra, mas é cortado pela tesoura e a pedra quebra a tesoura e é embrulhada pelo papel.</p>
-            </div>
-      
+        <div class="panelResult">
+          <div id="divResult"></div>
         </div>
+      </div>
+
+      <div class="divFooter">
+        <div id="about">
+          <h2>Regras</h2>
+          <p class="p-4">
+            <strong
+              >Caso você não saiba, jokenpô é um jogo em que as pessoas jogam
+              com as mãos, escolhendo entre pedra, papel e tesoura.
+            </strong>
+            Funciona assim: a tesoura corta o papel, mas quebra com a pedra; o
+            papel embrulha a pedra, mas é cortado pela tesoura e a pedra quebra
+            a tesoura e é embrulhada pelo papel.
+          </p>
+        </div>
+      </div>
     </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="./js/script.js"></script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.slim.js"
+    integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/nav.js"></script>
+  <script src="./js/script.js"></script>
 </html>
