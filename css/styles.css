@@ -57,3 +57,7 @@ ul {
     border: 1px solid silver;
     width: 100%;
 }
+
+.toast-header img{
+    height: 2rem;
+}

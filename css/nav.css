@@ -54,6 +54,14 @@ nav.couleur a {
 
 .navPlacar {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.liPlayer{
+ color: aquamarine;
+
+}
+.liRobo{
+ color: rgba(208, 77, 248, 0.979);
 }
 

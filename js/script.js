@@ -107,10 +107,10 @@ function gaming(player, robo){
     console.log("robo: "+ robo);
     console.log(msg);
 
-    render(robo);
+    render(robo, msg);
 }
 
-function render(robo){
+function render(robo, msg){
 
     switch(robo){
         case 1:{
@@ -147,7 +147,9 @@ function render(robo){
     }
 
     $("#divResult").html(`
-        <h3>Robô</h3>
+
+        <span><strong>${msg}</strong></span>
+        <span><strong>Robô</strong></span>
         <div class="card-body">
             ${img}
         </div>
@@ -163,4 +165,29 @@ function render(robo){
             </li>
         </ul>
     `);
+
+    $("#navPlacar").html(
+        `
+        <ul class="navPlacar">
+            <li class="liPlayer">Player: ${playerScore}</li>
+            <li class="liRobo">Robô: ${roboScore}</li>
+        </ul>
+        `
+    )
+
+    toast(msg);
+    
 }
+
+function toast(msg){
+    const toastLiveExample = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastLiveExample);
+
+    $("#toasstMsg").html(
+        `
+        <span>${msg}</span>
+        `
+    )
+
+    toast.show();
+};
