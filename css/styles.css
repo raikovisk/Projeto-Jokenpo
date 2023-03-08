@@ -1,0 +1,48 @@
+
+
+body{
+    background-color: rgb(209, 221, 248);
+    text-align: center;
+    height: 100vh;
+}
+
+.cover{
+    height: 12em;
+    border-radius: 15px;
+}
+
+.container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divGame{
+    margin-bottom: 2rem;
+}
+
+.cardBox{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.card-body{
+    margin: 0.5rem;
+}
+
+.toast-header{
+    justify-content: space-between;
+}
+
+#divResult{
+    border: 1px solid silver;
+    width: 100%;
+    height: 30vh;
+}
+
+.button{
+    height: 5rem;
+    width: 6rem;
+}
