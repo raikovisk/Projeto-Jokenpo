@@ -8,7 +8,6 @@
     }
      */
 .navbar {
-  border-radius: 15px;
   z-index: 3;
   justify-content: center;
 }
@@ -57,11 +56,17 @@ nav.couleur a {
   flex-direction: column;
   justify-content: space-around;
 }
-.liPlayer{
- color: aquamarine;
+
+.liPlayer {
+  color: aquamarine;
 
 }
-.liRobo{
- color: rgba(208, 77, 248, 0.979);
+
+.liRobo {
+  color: rgba(208, 77, 248, 0.979);
 }
 
+.badge {
+  background-color: gainsboro;
+  min-width: 30vw;
+}
