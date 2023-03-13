@@ -1,4 +1,9 @@
-
+:root {
+    --color-primary: hsl(310, 100%, 65%);
+    --color-secondary: hsl(160, 100%, 65%);
+    --background: hsl(230, 30%, 15%);
+    --text: hsl(310, 100%, 95%);
+  }
 
 body{
     background-color: #cce8fade;
