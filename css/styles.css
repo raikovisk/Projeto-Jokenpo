@@ -12,9 +12,9 @@
     -webkit-text-fill-color: var(--background);
   }
   
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
   
   body {
     display: grid;
