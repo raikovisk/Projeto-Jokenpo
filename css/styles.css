@@ -1,7 +1,8 @@
 :root {
     --color-primary: hsl(310, 100%, 65%);
     --color-secondary: hsl(160, 100%, 65%);
-    --background: hsl(230, 30%, 15%);
+    --background: hsl(229, 24%, 37%);
+    /* --background: hsl(230, 30%, 15%); */
     --text: hsl(310, 100%, 95%);
   }
 
