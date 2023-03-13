@@ -25,7 +25,7 @@
 .navbar-default .navbar-collapse {
   padding-right: 0px;
   padding-left: 0px;
-  float: right;
+  /* float: right; */
 }
 
 .navbar-nav {
