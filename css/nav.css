@@ -7,10 +7,6 @@
       
     }
      */
-.navbar {
-  z-index: 3;
-  justify-content: center;
-}
 
 .navbar-default {
   background-color: transparent;
@@ -31,6 +27,9 @@
   float: right;
   overflow: hidden;
   transition: all 0.5s ease;
+  z-index: 3;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .navbar-nav li {
