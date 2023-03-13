@@ -63,10 +63,10 @@ nav.couleur a {
 
 .liRobo {
   color: rgba(208, 77, 248, 0.979);
-  background-color: gainsboro;
+  background-color: whitesmoke;
 }
 
 .badge {
-  background-color: gainsboro;
+  background-color: whitesmoke;
   min-width: 30vw;
 }
