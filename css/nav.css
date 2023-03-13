@@ -60,15 +60,13 @@ nav.couleur a {
 
 .liPlayer {
   color: aquamarine;
-  background-color: rgb(255, 255, 255);
 }
 
 .liRobo {
   color: rgba(208, 77, 248, 0.979);
-  background-color: rgba(255, 255, 255, 0.301);
 }
 
 .badge {
-  
   min-width: 30vw;
+  background-color: rgba(255, 255, 255, 0.295);
 }
