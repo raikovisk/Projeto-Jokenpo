@@ -5,7 +5,7 @@
     --text: hsl(310, 100%, 95%);
   }
 
-  ::selection {
+  ::Escolha {
     background-color: var(--color-primary);
     color: var(--background);
     -webkit-text-fill-color: var(--background);
