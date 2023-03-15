@@ -1,9 +1,8 @@
 :root {
-    --color-primary: hsl(310, 100%, 65%);
-    --color-secondary: hsl(160, 100%, 65%);
+    --color-primary: hsl(310, 91%, 64%);
+    --color-secondary: hsl(160, 98%, 62%);
     --background: hsl(279, 22%, 13%);
     --text: hsl(310, 100%, 95%);
-    margin: 0 auto;
   }
 
   ::Escolha {
@@ -88,7 +87,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid silver;
+    /* border: 1px solid silver; */
     width: 100%;
 }
 
@@ -97,5 +96,5 @@ ul {
 }
 
 .toast-body{
-    color: #323238;
+    color: #000000;
 }
