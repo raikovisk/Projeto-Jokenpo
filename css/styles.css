@@ -92,8 +92,10 @@ ul {
     color: #000000;
 }
 
+/* ------------NAVBAR----------- */
+
 .navbar{
-    height: 7rem;
+    height: 6rem;
 }
 
 .imgbar{
