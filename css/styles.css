@@ -3,6 +3,7 @@
     --color-secondary: hsl(160, 100%, 65%);
     --background: hsl(279, 22%, 13%);
     --text: hsl(310, 100%, 95%);
+    margin: 0 auto;
   }
 
   ::Escolha {
