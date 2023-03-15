@@ -1,21 +1,8 @@
 :root {
     --color-primary: hsl(310, 100%, 65%);
     --color-secondary: hsl(160, 100%, 65%);
-    --background: hsl(230, 30%, 15%);
+    --background: hsl(279, 22%, 13%);
     --text: hsl(310, 100%, 95%);
-    --colors-grey-100: #E1E1E6;
-    --colors-grey-200: #C4C4CC;
-    --colors-grey-300: #8D8D99;
-    --colors-grey-400: #7C7C8A;
-    --colors-grey-500: #505059;
-    --colors-grey-600: #323238;
-    --colors-grey-700: #29292E;
-    --colors-grey-800: #202024;
-    --colors-grey-900: #121214;
-    --colors-grey-950: #09090A;
-    --colors-text-title: #E1E1E6;
-    --colors-text-base: #C4C4CC;
-    --colors-shape-primary: #202024;
   }
 
   ::Escolha {
@@ -25,11 +12,10 @@
   }
   
   * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
   
   body {
-    display: grid;
     place-content: center;
     gap: 4vh;
     min-height: 100vh;
