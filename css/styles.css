@@ -97,5 +97,5 @@ ul {
 }
 
 .imgbar{
-    height: 8rem;
+    height: fit-content;
 }
