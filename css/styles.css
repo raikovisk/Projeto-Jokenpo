@@ -109,9 +109,6 @@ ul {
 .divPlacar{
     display: flex;
 }
-.navBody{
-    justify-content: space-around;
-}
 
 .liPlayer{
     color: #ff1f8f;
