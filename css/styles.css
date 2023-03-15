@@ -108,9 +108,9 @@ ul {
 
 .divPlacar{
     display: flex;
-    justify-content: space-around;
 }
 .navBody{
+    justify-content: space-around;
     padding: 1rem;
 }
 
