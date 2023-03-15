@@ -103,3 +103,8 @@ ul {
 .imgbar{
     height: 90%;
 }
+
+.divPlacar{
+    display: flex;
+    flex-direction: column;
+}
