@@ -97,6 +97,7 @@ ul {
 .navbar{
     height: 5rem;
     border-radius: 5px;
+    padding: 1rem;
 }
 
 .imgbar{
