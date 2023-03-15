@@ -110,6 +110,9 @@ ul {
     display: flex;
     justify-content: space-around;
 }
+.navBody{
+    padding: 1rem;
+}
 
 .liPlayer{
     color: #ff1f8f;
