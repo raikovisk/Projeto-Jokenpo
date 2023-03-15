@@ -91,3 +91,7 @@ ul {
 .toast-body {
     color: #000000;
 }
+
+.navbar{
+    height: 5vh;
+}
