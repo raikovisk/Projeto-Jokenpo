@@ -110,3 +110,10 @@ ul {
     display: flex;
     padding: 0.5rem;
 }
+
+.liPlayer{
+    color: #ff1f8f;
+}
+.liRobo{
+    color: #ff1f8f;
+}
