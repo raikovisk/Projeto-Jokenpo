@@ -95,3 +95,7 @@ ul {
 .navbar{
     height: 10rem;
 }
+
+.imgbar{
+    height: fit-content;
+}
