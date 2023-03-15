@@ -95,7 +95,8 @@ ul {
 /* ------------NAVBAR----------- */
 
 .navbar{
-    height: 6rem;
+    height: 5rem;
+    border-radius: 5px;
 }
 
 .imgbar{
