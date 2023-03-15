@@ -1,8 +1,8 @@
 :root {
-    --color-primary: hsl(310, 91%, 64%);
+    --color-primary: rgb(247, 80, 219);
     --color-secondary: hsl(160, 98%, 62%);
     --background: hsl(279, 22%, 13%);
-    --text: hsl(246, 83%, 95%);
+    --text: rgb(247, 80, 219);
 }
 
 ::Escolha {
