@@ -157,7 +157,7 @@ ul {
   flex-direction: column;
   padding: 1rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   border-radius: 15px;
   border: 1px solid hsla(337, 98%, 54%, 30%);
   background-color: var(--navbar-color);
