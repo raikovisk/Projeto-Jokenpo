@@ -39,7 +39,7 @@
 
 .btnLogo {
   height: 100%;
-  width: 40%;
+  max-width: 45%;
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 0;
@@ -52,30 +52,30 @@
 }
 
 .navBody{
-    width: 30%;
+    max-width: 40%;
     display: flex;
     height: calc(var(--navHeght) - 1rem);
     background-color: var(--background);
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    padding: 0.2rem 0.5rem;
+    padding: 0em 1em;
     border: 1px solid rgb(73, 72, 72);
     text-align: left;
+    margin: 0;
 }
 
 li {
-  margin-left: 1rem;
   font-weight: 800;
 }
 .liPlayer {
   color: var(--primary-color);
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 .liRobo {
   /* color: #fd166e; */
   color: var(--secundary-color);
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 /* ------------CORPO----------- */
@@ -107,7 +107,6 @@ ul {
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   margin-top: calc(var(--navHeght) + 2rem);
   text-align: center;
 }
@@ -119,6 +118,7 @@ ul {
   justify-content: space-around;
   padding: 1rem;
   gap: 1rem;
+  max-width: 95vw;
 }
 
 .cardBox {
@@ -131,6 +131,7 @@ ul {
   background-color: var(--navbar-color);
   border: 1px solid hsla(172, 100%, 30%, 0.3);
   border-radius: 25px;
+  padding: 0.3rem;
 }
 
 .card {
