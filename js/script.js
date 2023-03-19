@@ -30,17 +30,14 @@ function buttonClick(event){
 
         switch(currentClick) {
             case 'btnStone':
-                $("#radStone").prop("checked", true);
                 choice = 1;
                 gaming(choice, robo);
                 break;
                 case 'btnPapper':
-                    $("#radPapper").prop("checked", true);
                     choice = 2;
                     gaming(choice, robo);
                     break;
                     case 'btnSciss':
-                        $("#radSciss").prop("checked", true);
                         choice = 3;
                         gaming(choice, robo);
                 break;
@@ -144,46 +141,46 @@ function render(robo, msg){
 
     $("#divResult").html(`
 
-        <span class = "fs-4"><strong>${msg}</strong></span>
-        <div class="card-body">
-        <span><strong>Robô Jogou </strong></span>
-            ${img}
-        </div>
-        <ul>
-            <li>
-                <span class="fs-5"><strong>Player: </strong> ${playerScore}</span>
-            </li>
-            <li>
-                <span class="fs-5"><strong>Robô: </strong> ${roboScore}</span>
-            </li>
-            <li>
-                <span class="fs-5"><strong>Rodada(s): </strong> ${round}</span>
-            </li>
-        </ul>
+    <span class = "fs-4"><strong>${msg}</strong></span>
+    <div class="card-body">
+    <span><strong>Robô Jogou </strong></span>
+    ${img}
+    </div>
+    <ul>
+    <li>
+    <span class="liPlayer fs-5"><strong>Player: </strong> ${playerScore}</span>
+    </li>
+    <li>
+    <span class="liRobo fs-5"><strong>Robô: </strong> ${roboScore}</span>
+    </li>
+    <li>
+    <span class="fs-5"><strong>Rodada(s): </strong> ${round}</span>
+    </li>
+    </ul>
     `);
 
     $("#divPlacar").html(
         `
         <ul>
-          <li id="player" class="liPlayer fs-5">PLAYER: ${playerScore}</li>
-          <li id="robo" class="liRobo fs-5">ROBÔ: ${roboScore}</li>
+          <li id="player" class="liPlayer">PLAYER: ${playerScore}</li>
+          <li id="robo" class="liRobo">ROBÔ: ${roboScore}</li>
         </ul>
         `
     )
 
-    toast(msg);
     
 }
-// -------------------TOAST-----------------------
-function toast(msg){
-    const toastLiveExample = document.getElementById('liveToast');
-    const toast = new bootstrap.Toast(toastLiveExample);
 
-    $("#toastMsg").html(
-        `
-        <span>${msg}</span>
-        `
-    )
 
-    toast.show();
-};
+// ----------------NAVBAR-------------------------
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 0){
+          $(".navbar").addClass("navActive");
+    }
+    else{
+          $(".navbar").removeClass("navActive");
+      }
+    });
+  });

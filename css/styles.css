@@ -1,138 +1,181 @@
 :root {
-    --text: rgb(252, 253, 241);
-    --background: rgb(35, 26, 40);
-    --navbar-color:#36333a;
-    -webkit-font-smoothing: antialiased;
-    background-color: rgb(35, 26, 40);
-    color: white;
-    box-sizing: border-box;
-    margin:  0;
-    padding: 0;
+  --text: rgb(252, 253, 241);
+  --background: #2a2238;
+  --navbar-color: #434050;
+  --navHeght: 6rem;
+  --primary-color: #26ffe2;
+  --secundary-color: #fd166e;
+  --border-color: #69727233;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(35, 26, 40);
+  color: white;
+  box-sizing: border-box;
 }
 
 /* ------------NAVBAR----------- */
 
-.navbar{
-    height: 5rem;
-    border-radius: 5px;
-    background-color: var(--navbar-color);
-    padding: 0.2rem 2rem;
-    /* z-index: 2; */
+.navbar {
+  height: var(--navHeght);
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  padding: 0.2rem 0.5rem;
+  width: 75vw;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  flex-wrap: nowrap;
+  background-color: var(--navbar-color);
+  border: 2px solid var(--border-color);
 }
 
-.imgbar{
-    height: 95%;
-    border-radius: 15px;
-    border: 2px solid #252525;
+.navActive {
+  background-color: var(--navbar-color);
+  width: 100%;
 }
 
-.divPlacar{
+/* ******************************************8 */
+
+.btnLogo {
+  height: 100%;
+  width: 40%;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0;
+}
+
+.imgbar {
+    height: 100%;
+    border-radius: 20px;
+  
+}
+
+.navBody{
+    width: 30%;
     display: flex;
-    align-items: center;
+    height: calc(var(--navHeght) - 1rem);
     background-color: var(--background);
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     padding: 0.2rem 0.5rem;
     border: 1px solid rgb(73, 72, 72);
     text-align: left;
 }
 
-li{
-    margin-left: 1rem;
-    font-weight: 700;
+li {
+  margin-left: 1rem;
+  font-weight: 800;
 }
-.liPlayer{
-    color: #26ffe2;
+.liPlayer {
+  color: var(--primary-color);
+  font-size: 0.6em;
 }
-.liRobo{
-    color: #fd166e;
+.liRobo {
+  /* color: #fd166e; */
+  color: var(--secundary-color);
+  font-size: 0.6em;
 }
 
 /* ------------CORPO----------- */
 
 body {
-    margin-top: 5rem;
-    place-content: center;
-    height: 100vh;
-    line-height: 1.5;
-    background-color: var(--background);
-    color: var(--text);
+  background-color: var(--background);
+  color: var(--text);
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
-    color: #fd166e(--color-primary);
+  color: var(--secundary-color);
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.cover {
-    height: 12em;
-    border-radius: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin-top: calc(var(--navHeght) + 2rem);
+  text-align: center;
 }
 
 .divGame {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .cardBox {
-    display: flex;
-    background-color: var(--navbar-color);
-    margin: 0.5rem;
-    margin-right: 5rem;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 10rem;
+  background-color: var(--navbar-color);
+  border: 1px solid hsla(172, 100%, 30%, 0.3);
+  border-radius: 25px;
 }
 
 .card {
-    max-width: 6rem;
-    background-color: #2b182b;
-    text-align: center;
-    color: white;
+  max-width: 5rem;
+  background-color: #2b182b;
+  text-align: center;
+  color: white;
 }
 
 .card-body {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
 }
 
-button {
-    height: 5rem;
-    width: 6rem;
-    border: 1px solid #444444;
+.card-body button {
+  height: 3rem;
+  width: 3rem;
 }
 
 #divResult {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid silver; */
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid hsla(337, 98%, 54%, 30%);
+  background-color: var(--navbar-color);
+  height: 20rem;
+  width: 18rem;
 }
 /* -------------- TOAST ---------------- */
-.toast-container{
-    z-index: 2;
+.toast-container {
+  z-index: 2;
 }
 
 .toast-header img {
-    height: 2rem;
+  height: 2rem;
 }
 
 .toast-body {
-    color: #726f6f;
+  color: #726f6f;
+}
+
+.divFooter {
+  text-align: left;
+  padding: 2rem;
 }
