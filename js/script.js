@@ -103,10 +103,6 @@ function gaming(player, robo){
     }
     
     round++;
-    console.log("player: "+ player);
-    console.log("robo: "+ robo);
-    console.log(msg);
-
     render(robo, msg);
 }
 
@@ -148,29 +144,29 @@ function render(robo, msg){
 
     $("#divResult").html(`
 
-        <span><strong>${msg}</strong></span>
-        <span><strong>Robô</strong></span>
+        <span class = "fs-4"><strong>${msg}</strong></span>
         <div class="card-body">
+        <span><strong>Robô Jogou </strong></span>
             ${img}
         </div>
         <ul>
             <li>
-                <span><strong>Player: </strong> ${playerScore}</span>
+                <span class="fs-5"><strong>Player: </strong> ${playerScore}</span>
             </li>
             <li>
-                <span><strong>Robô: </strong> ${roboScore}</span>
+                <span class="fs-5"><strong>Robô: </strong> ${roboScore}</span>
             </li>
             <li>
-                <span><strong>Rodada(s): </strong> ${round}</span>
+                <span class="fs-5"><strong>Rodada(s): </strong> ${round}</span>
             </li>
         </ul>
     `);
 
-    $("#navPlacar").html(
+    $("#divPlacar").html(
         `
-        <ul class="navPlacar">
-            <li class="liPlayer">Player: ${playerScore}</li>
-            <li class="liRobo">Robô: ${roboScore}</li>
+        <ul>
+          <li id="player" class="liPlayer fs-5">PLAYER: ${playerScore}</li>
+          <li id="robo" class="liRobo fs-5">ROBÔ: ${roboScore}</li>
         </ul>
         `
     )
@@ -178,12 +174,12 @@ function render(robo, msg){
     toast(msg);
     
 }
-
+// -------------------TOAST-----------------------
 function toast(msg){
     const toastLiveExample = document.getElementById('liveToast');
     const toast = new bootstrap.Toast(toastLiveExample);
 
-    $("#toasstMsg").html(
+    $("#toastMsg").html(
         `
         <span>${msg}</span>
         `
