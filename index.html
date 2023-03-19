@@ -12,7 +12,7 @@
   <body>
     <!---------- NAVBAR ---------->
     <nav class="navbar transparency" >
-      <a class="navbar-brand btnLogo" href="#">
+      <a id="btnLogo" class="navbar-brand btnLogo" href="#">
         <img
           class="imgbar d-inline-block align-top img-fluid"
           src="./imgs/d4193794bdf803f776d42d4023a7cf44.jpg"
@@ -34,13 +34,14 @@
       <div class="wrapper">
         <h1>::Escolha::</h1>
         <p class="p-1">Pedra, Papel ou Tesoura</p>
+
         <div id="game" class="divGame">
           <div id="formGame" class="cardBox">
             <div class="card-body">
-              <div class="card">
+              <div class="card rounded-4">
                 <input
                   id="btnStone"
-                  class="button btn btn-outline-danger"
+                  class="button btn btn-outline-danger rounded-4"
                   src="./imgs/pedra.png"
                   alt="punhofechado"
                   type="image"
@@ -49,10 +50,10 @@
               </div>
             </div>
             <div class="card-body">
-              <div class="card">
+              <div class="card rounded-4">
                 <input
                   id="btnPapper"
-                  class="button btn btn-outline-primary"
+                  class="button btn btn-outline-primary rounded-4"
                   src="./imgs/papel.png"
                   alt="mão aberta"
                   type="image"
@@ -61,10 +62,10 @@
               </div>
             </div>
             <div class="card-body">
-              <div class="card">
+              <div class="card rounded-4">
                 <input
                   id="btnSciss"
-                  class="button btn btn-outline-warning"
+                  class="button btn btn-outline-warning rounded-4"
                   src="./imgs/tesoura.png"
                   alt="dedos abertos em tesoura"
                   type="image"
@@ -76,6 +77,33 @@
 
           <div class="panelResult">
             <div id="divResult">
+
+              <div id="loader" class= "loaderOff" >
+                <div class="loader loader--style5" title="4">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <rect x="0" y="0" width="4" height="10" fill="#333">
+                      <animateTransform attributeType="xml"
+                        attributeName="transform" type="translate"
+                        values="0 0; 0 20; 0 0"
+                        begin="0" dur="0.6s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="10" y="0" width="4" height="10" fill="#333">
+                      <animateTransform attributeType="xml"
+                        attributeName="transform" type="translate"
+                        values="0 0; 0 20; 0 0"
+                        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+                    </rect>
+                    <rect x="20" y="0" width="4" height="10" fill="#333">
+                      <animateTransform attributeType="xml"
+                        attributeName="transform" type="translate"
+                        values="0 0; 0 20; 0 0"
+                        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+                    </rect>
+                  </svg>
+                </div>
+              </div>
+
               <ul>
                 <li class="liPlayer fs-5">PLAYER: 0</li>
                 <li class="liRobo fs-5">ROBÔ: 0</li>

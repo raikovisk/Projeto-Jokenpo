@@ -130,16 +130,17 @@ ul {
   height: 20rem;
   width: 10rem;
   background-color: var(--navbar-color);
-  border: 1px solid hsla(172, 100%, 30%, 0.3);
+  border: 1px solid hsla(172, 100%, 30%, 0.30);
   border-radius: 25px;
   padding: 0.3rem;
 }
 
 .card {
   max-width: 5rem;
-  background-color: #2b182b;
+  background-color: hsl(300, 28%, 13%, 0.80);
   text-align: center;
   color: white;
+  padding: 0.2rem;
 }
 
 .card-body {
@@ -186,4 +187,37 @@ ul {
 .divFooter {
   text-align: left;
   padding: 2rem;
+}
+
+/* -------------LOADER ---------- */
+
+.loaderOff{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+  display: none;
+}
+
+.loaderActive{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+ color of the icon
+*/
+svg path,
+svg rect{
+  fill: #ffffff;
 }
