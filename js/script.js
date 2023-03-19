@@ -96,6 +96,8 @@ function gaming(player, robo) {
   render(robo, msg);
 }
 
+// ---------------- RENDER RESULT ----------------
+
 function render(robo, msg) {
   switch (robo) {
     case 1: {
@@ -146,6 +148,8 @@ function render(robo, msg) {
     </li>
     </ul>
     `);
+    
+    // ---------------- RENDER RESULT NAVBAR ------------------
 
   $("#divPlacar").html(
     `
@@ -184,15 +188,3 @@ $(document).ready(function () {
     }
   });
 });
-
-// ---------------- TOAST -------------------------
-
-const toastTrigger = document.getElementById("liveToastBtn");
-const toastLiveExample = document.getElementById("liveToast");
-if (toastTrigger) {
-  toastTrigger.addEventListener("click", () => {
-    const toast = new bootstrap.Toast(toastLiveExample);
-
-    toast.show();
-  });
-}
