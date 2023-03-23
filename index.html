@@ -20,7 +20,7 @@
           srcset=""
         />
       </a>
-      <div class="navBody" id="divPlacar">
+      <div class="navBody" id="navPlacar">
         <ul>
           <li id="player" class="liPlayer">PLAYER: 0</li>
           <li id="robo" class="liRobo">ROBÔ: 0</li>
@@ -36,8 +36,8 @@
         <p class="p-1">Pedra, Papel ou Tesoura</p>
 
         <div id="game" class="divGame">
-          <div id="formGame" class="cardBox">
-            <div class="card-body">
+          <div class="cardBox rounded-4">
+            <div class="card-body ">
               <div class="card rounded-4">
                 <input
                   id="btnStone"
@@ -75,13 +75,12 @@
             </div>
           </div>
 
-          <div class="panelResult">
-            <div id="divResult">
-
-              <div id="loader" class= "loaderOff" >
+          <div class="panelResult rounded-4">
+            
+              <div id="loader" class= "loader hidenLoader">
                 <div class="loader loader--style5" title="4">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                     width="30px" height="36px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                     <rect x="0" y="0" width="4" height="10" fill="#333">
                       <animateTransform attributeType="xml"
                         attributeName="transform" type="translate"
@@ -104,13 +103,18 @@
                 </div>
               </div>
 
+            <div id="divResult" class="divResult"> 
+
+            </div>
+            <div id="placarResult" class="placarResult">
               <ul>
-                <li class="liPlayer fs-5">PLAYER: 0</li>
-                <li class="liRobo fs-5">ROBÔ: 0</li>
-                <li>Rodada(s): 0</li>
+                <li class="liPlayer fs-6">PLAYER: 0</li>
+                <li class="liRobo fs-6">ROBÔ: 0</li>
+                <li class=" fs-6">Rodada(s): 0</li>
               </ul>
             </div>
-          </div>
+
+
 
           </div>
 

@@ -23,7 +23,7 @@
   width: 75vw;
   margin: 0 auto;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   transition: 0.3s ease-in-out;
   flex-wrap: nowrap;
   background-color: var(--navbar-color);
@@ -74,7 +74,6 @@ li {
   font-size: 0.7em;
 }
 .liRobo {
-  /* color: #fd166e; */
   color: var(--secundary-color);
   font-size: 0.7em;
 }
@@ -103,23 +102,70 @@ ul {
   display: flex;
   flex-direction: column;
   /* height: 100vh; */
+  position: absolute;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
   margin-top: calc(var(--navHeght) + 2rem);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .divGame {
   display: flex;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   /* flex-direction: column; */
   justify-content: space-around;
   padding: 1rem;
   gap: 1rem;
   max-width: 95vw;
+}
+
+.panelResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--navbar-color);
+  border: 1px solid hsla(172, 100%, 30%, 0.30);
+  border-radius: 25px;
+  padding: 1rem;
+  border: 1px solid hsla(337, 98%, 54%, 30%);
+  background-color: var(--navbar-color);
+  height: 20rem;
+  width: 18rem;
+}
+
+.divResult{
+  /* border: #ffffff 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 15rem;
+}
+
+/* -------------LOADER ---------- */
+
+.loader{
+  padding: 2rem;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.hidenLoader{
+  display: none;
+}
+
+/*
+ color of the icon
+*/
+svg path,
+svg rect{
+  fill: #ffffff;
 }
 
 .cardBox {
@@ -136,15 +182,10 @@ ul {
 }
 
 .card {
-  max-width: 5rem;
+  width: 5rem;
   background-color: hsl(300, 28%, 13%, 0.80);
   text-align: center;
   color: white;
-  padding: 0.2rem;
-}
-
-.card-body {
-  align-items: center;
   padding: 0.2rem;
 }
 
@@ -153,19 +194,6 @@ ul {
   width: 3rem;
 }
 
-#divResult {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: center;
-  justify-content: flex-end;
-  border-radius: 15px;
-  border: 1px solid hsla(337, 98%, 54%, 30%);
-  background-color: var(--navbar-color);
-  height: 20rem;
-  width: 18rem;
-  font-size: 0.8rem;
-}
 /* -------------- TOAST ---------------- */
 .toast-container {
   z-index: 2;
@@ -189,35 +217,3 @@ ul {
   padding: 2rem;
 }
 
-/* -------------LOADER ---------- */
-
-.loaderOff{
-  margin: 0 0 2em;
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-  display: none;
-}
-
-.loaderActive{
-  margin: 0 0 2em;
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/*
- color of the icon
-*/
-svg path,
-svg rect{
-  fill: #ffffff;
-}

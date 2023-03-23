@@ -1,6 +1,7 @@
 var round = 0,
   roboScore = 0,
   playerScore = 0;
+  time = 500;
 
 window.addEventListener("load", () => {
   addEvent();
@@ -11,26 +12,34 @@ function addEvent() {
   $("#btnPapper").bind("click", buttonClick);
   $("#btnSciss").bind("click", buttonClick);
   $("#btnPlay").bind("click", buttonClick);
-  $("#btnLogo").bind("click", btnLogoPlay);
+  $("#btnLogo").bind("click", btnPlay);
 }
 
-function btnLogoPlay(){
-    let choice = getRandom();
-    let robo = getRandom();
+function btnPlay(){
+  let choice = getRandom();
+  let robo = getRandom();
 
-    // $("#divResult").html('');
-    $("#loader").removeClass("loaderOff");
-    $("#loader").addClass("loaderActive");
-    setTimeout(function(){
-        
-        $(".loader").removeClass("loaderActive");
-        gaming(choice, robo);
-       
-    }, 1000);  
+  gaming(choice,robo);onLoading();
+  setTimeout(() => {
+    gaming(choice, robo);
+  }, time);
+
 }
+
+function onLoading() {
+
+  $("#divResult").html(``);
+  $("#loader").removeClass("hidenLoader");
+  
+  setTimeout(function () {
+    $("#loader").addClass("hidenLoader");
+  }, time);
+}
+
 
 function getRandom() {
-  let min = 1, max = 3;
+  let min = 1,
+    max = 3;
   let retult = Math.floor(Math.random() * (max - min + 1) + min);
 
   return retult;
@@ -46,15 +55,24 @@ function buttonClick(event) {
   switch (currentClick) {
     case "btnStone":
       choice = 1;
-      gaming(choice, robo);
+      onLoading();
+      setTimeout(() => {
+        gaming(choice, robo);
+      }, time);
       break;
     case "btnPapper":
       choice = 2;
-      gaming(choice, robo);
+      onLoading();
+      setTimeout(() => {
+        gaming(choice, robo);
+      }, time);
       break;
     case "btnSciss":
       choice = 3;
-      gaming(choice, robo);
+      onLoading();
+      setTimeout(() => {
+        gaming(choice, robo);
+      }, time);
       break;
   }
 }
@@ -65,7 +83,7 @@ function gaming(player, robo) {
   switch (player) {
     case 1: {
       if (robo == 2) {
-        msg = "Você perdeu! ;(";
+        msg = "Você perdeu! :[";
         roboScore++;
         break;
       } else if (robo == 3) {
@@ -79,7 +97,7 @@ function gaming(player, robo) {
     }
     case 2: {
       if (robo == 3) {
-        msg = "Você perdeu! ;(";
+        msg = "Você perdeu! :[";
         roboScore++;
         break;
       } else if (robo == 1) {
@@ -93,7 +111,7 @@ function gaming(player, robo) {
     }
     case 3: {
       if (robo == 1) {
-        msg = "Você perdeu! ;(";
+        msg = "Você perdeu! :[";
         roboScore++;
         break;
       } else if (robo == 2) {
@@ -145,28 +163,30 @@ function render(robo, msg) {
   }
 
   $("#divResult").html(`
+  <span class = "fs-4"><strong>${msg}</strong></span>
+  <div class="card-body">
+  <span><strong>Robô Jogou </strong></span>
+  ${img}
+  </div>
+  `);
 
-    <span class = "fs-4"><strong>${msg}</strong></span>
-    <div class="card-body">
-    <span><strong>Robô Jogou </strong></span>
-    ${img}
-    </div>
+  $("#placarResult").html(`
     <ul>
     <li>
-    <span class="liPlayer fs-5"><strong>Player: </strong> ${playerScore}</span>
+    <span class="liPlayer fs-6"><strong>Player: </strong> ${playerScore}</span>
     </li>
     <li>
-    <span class="liRobo fs-5"><strong>Robô: </strong> ${roboScore}</span>
+    <span class="liRobo fs-6"><strong>Robô: </strong> ${roboScore}</span>
     </li>
     <li>
-    <span class="fs-5"><strong>Rodada(s): </strong> ${round}</span>
+    <span class="fs-6"><strong>Rodada(s): </strong> ${round}</span>
     </li>
     </ul>
     `);
-    
-    // ---------------- RENDER RESULT NAVBAR ------------------
 
-  $("#divPlacar").html(
+  // ---------------- RENDER RESULT NAVBAR ------------------
+
+  $("#navPlacar").html(
     `
         <ul>
         <li id="player" class="liPlayer">PLAYER: ${playerScore}</li>
