@@ -128,13 +128,12 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: var(--navbar-color);
-  border: 1px solid hsla(172, 100%, 30%, 0.30);
-  border-radius: 25px;
   padding: 1rem;
-  border: 1px solid hsla(337, 98%, 54%, 30%);
+  border: 1px solid hsla(337, 98%, 54%, 20%);
   background-color: var(--navbar-color);
   height: 20rem;
   width: 18rem;
+  box-shadow:  0px 1px 15px 0px hsla(337, 98%, 54%, 20%);
 }
 
 .divResult{
@@ -145,6 +144,33 @@ ul {
   align-items: center;
   height: 20rem;
   width: 15rem;
+}
+
+
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 10rem;
+  background-color: var(--navbar-color);
+  border: 1px solid hsla(172, 100%, 30%, 0.20);
+  padding: 0.3rem;
+  box-shadow:  0px 1px 15px 0px hsla(172, 100%, 30%, 20%);
+}
+
+.card {
+  width: 5rem;
+  background-color: hsl(300, 28%, 13%, 0.80);
+  text-align: center;
+  color: white;
+  padding: 0.2rem;
+}
+
+.card-body button {
+  height: 3rem;
+  width: 3rem;
 }
 
 /* -------------LOADER ---------- */
@@ -166,32 +192,6 @@ ul {
 svg path,
 svg rect{
   fill: #ffffff;
-}
-
-.cardBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 20rem;
-  width: 10rem;
-  background-color: var(--navbar-color);
-  border: 1px solid hsla(172, 100%, 30%, 0.30);
-  border-radius: 25px;
-  padding: 0.3rem;
-}
-
-.card {
-  width: 5rem;
-  background-color: hsl(300, 28%, 13%, 0.80);
-  text-align: center;
-  color: white;
-  padding: 0.2rem;
-}
-
-.card-body button {
-  height: 3rem;
-  width: 3rem;
 }
 
 /* -------------- TOAST ---------------- */
