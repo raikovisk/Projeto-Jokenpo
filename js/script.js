@@ -35,7 +35,7 @@ function btnPlay(){
   let choice = getRandom();
   let robo = getRandom();
 
-  gaming(choice,robo);onLoading();
+  onLoading();
   setTimeout(() => {
     gaming(choice, robo);
   }, time);
