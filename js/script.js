@@ -1,7 +1,7 @@
 var round = 0,
   roboScore = 0,
   playerScore = 0;
-  time = 500;
+  varTime = 500;
 
 window.addEventListener("load", () => {
   showBody();
@@ -15,7 +15,7 @@ function showBody(){
     $("#main").removeClass('hidden');
     $("#body").removeClass('hiddenOverflow');
     $("#divLoading").html('');
-  }, 100);
+  }, varTime);
 
 }
 
@@ -38,7 +38,7 @@ function btnPlay(){
   onLoading();
   setTimeout(() => {
     gaming(choice, robo);
-  }, time);
+  }, varTime);
 
 }
 
