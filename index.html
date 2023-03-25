@@ -4,163 +4,194 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+
     <title>Projeto Jokenpô</title>
   </head>
 
-  <body>
-    <!---------- NAVBAR ---------->
-    <nav class="navbar transparency" >
-      <a id="btnLogo" class="navbar-brand btnLogo" href="#">
-        <img
-          class="imgbar d-inline-block align-top img-fluid"
-          src="./imgs/d4193794bdf803f776d42d4023a7cf44.jpg"
-          alt=""
-          srcset=""
-        />
-      </a>
-      <div class="navBody" id="navPlacar">
-        <ul>
-          <li id="player" class="liPlayer">PLAYER: 0</li>
-          <li id="robo" class="liRobo">ROBÔ: 0</li>
-        </ul>
-      </div>
-    </nav>
+  <body id="body" class="hiddenOverflow">
+    
+    <div id="divLoading" class="loading-container">
+      <span class="loading"></span>
+      <h2>Loading...</h2>
+    </div>
 
-    <!---------- CORPO -------------->
-    <div class="container">
+    <div id="main" class="hidden" >
+      <!---------- NAVBAR ---------->
+      <nav class="navbar transparency">
+        <a id="btnLogo" class="navbar-brand btnLogo" href="#">
+          <img
+            class="imgbar d-inline-block align-top img-fluid"
+            src="./imgs/d4193794bdf803f776d42d4023a7cf44.jpg"
+            alt=""
+            srcset=""
+          />
+        </a>
+        <div class="navBody" id="navPlacar">
+          <ul>
+            <li id="player" class="liPlayer">PLAYER: 0</li>
+            <li id="robo" class="liRobo">ROBÔ: 0</li>
+          </ul>
+        </div>
+      </nav>
 
-      <div class="wrapper">
-        <h1>::Escolha::</h1>
-        <p class="p-1">Pedra, Papel ou Tesoura</p>
+      <!---------- CORPO -------------->
+      <div class="container">
+        <div class="wrapper">
+          <h1>::Escolha::</h1>
+          <p class="p-1">Pedra, Papel ou Tesoura</p>
 
-        <div id="game" class="divGame">
-          <div class="cardBox rounded-4">
-            <div class="card-body ">
-              <div class="card rounded-4">
-                <input
-                  id="btnStone"
-                  class="button btn btn-outline-danger rounded-4"
-                  src="./imgs/pedra.png"
-                  alt="punhofechado"
-                  type="image"
-                />
-                <strong>Pedra</strong>
+          <div id="game" class="divGame">
+            <div class="cardBox btn-group-vertical rounded-4">
+
+              <div class="card-body">
+                <div class="card btn btn-outline-danger rounded-4 rounded-4">
+                  <input
+                    id="btnStone"
+                    src="./imgs/pedra.png"
+                    alt="punhofechado"
+                    type="image"
+                  />
+                  Pedra
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card btn btn-outline-primary rounded-4 rounded-4">
+                  <input
+                    id="btnPapper"
+                    src="./imgs/papel.png"
+                    alt="mão aberta"
+                    type="image"
+                  />
+                  Papel
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card btn btn-outline-warning rounded-4">
+                  <input
+                    id="btnSciss"
+                    src="./imgs/tesoura.png"
+                    alt="dedos abertos em tesoura"
+                    type="image"
+                  />
+                  Tesoura
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <div class="card rounded-4">
-                <input
-                  id="btnPapper"
-                  class="button btn btn-outline-primary rounded-4"
-                  src="./imgs/papel.png"
-                  alt="mão aberta"
-                  type="image"
-                />
-                <strong>Papel</strong>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card rounded-4">
-                <input
-                  id="btnSciss"
-                  class="button btn btn-outline-warning rounded-4"
-                  src="./imgs/tesoura.png"
-                  alt="dedos abertos em tesoura"
-                  type="image"
-                />
-                <strong>Tesoura</strong>
-              </div>
-            </div>
-          </div>
 
-          <div class="panelResult rounded-4">
-            
-              <div id="loader" class= "loader hidenLoader">
+            <div class="panelResult rounded-4">
+              <div id="loader" class="loader hidenLoader">
                 <div class="loader loader--style5" title="4">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="30px" height="36px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <svg
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="30px"
+                    height="36px"
+                    viewBox="0 0 24 30"
+                    style="enable-background: new 0 0 50 50"
+                    xml:space="preserve"
+                  >
                     <rect x="0" y="0" width="4" height="10" fill="#333">
-                      <animateTransform attributeType="xml"
-                        attributeName="transform" type="translate"
+                      <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="translate"
                         values="0 0; 0 20; 0 0"
-                        begin="0" dur="0.6s" repeatCount="indefinite" />
+                        begin="0"
+                        dur="0.6s"
+                        repeatCount="indefinite"
+                      />
                     </rect>
                     <rect x="10" y="0" width="4" height="10" fill="#333">
-                      <animateTransform attributeType="xml"
-                        attributeName="transform" type="translate"
+                      <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="translate"
                         values="0 0; 0 20; 0 0"
-                        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+                        begin="0.2s"
+                        dur="0.6s"
+                        repeatCount="indefinite"
+                      />
                     </rect>
                     <rect x="20" y="0" width="4" height="10" fill="#333">
-                      <animateTransform attributeType="xml"
-                        attributeName="transform" type="translate"
+                      <animateTransform
+                        attributeType="xml"
+                        attributeName="transform"
+                        type="translate"
                         values="0 0; 0 20; 0 0"
-                        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+                        begin="0.4s"
+                        dur="0.6s"
+                        repeatCount="indefinite"
+                      />
                     </rect>
                   </svg>
                 </div>
               </div>
 
-            <div id="divResult" class="divResult"> 
-
+              <div id="divResult" class="divResult"></div>
+              <div id="placarResult" class="placarResult">
+                <ul>
+                  <li class="liPlayer fs-6">PLAYER: 0</li>
+                  <li class="liRobo fs-6">ROBÔ: 0</li>
+                  <li class="fs-6">Rodada(s): 0</li>
+                </ul>
+              </div>
             </div>
-            <div id="placarResult" class="placarResult">
-              <ul>
-                <li class="liPlayer fs-6">PLAYER: 0</li>
-                <li class="liRobo fs-6">ROBÔ: 0</li>
-                <li class=" fs-6">Rodada(s): 0</li>
-              </ul>
-            </div>
-
-
-
           </div>
 
-        </div>
-
-        <!---------- TOAST ---------->
-        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-          <div
-            id="liveToast"
-            class="toast "
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="toast-header">
-              <img
-                src="./imgs/pedra-papel-tesoura-768x245.png"
-                class="rounded me-2 img-fluid"
-                alt="..."
-              />
-              <strong class="me-auto">Jokenpô</strong>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="toast"
-                aria-label="Close"
-              ></button>
+          <!---------- TOAST ---------->
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div
+              id="liveToast"
+              class="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
+              <div class="toast-header">
+                <img
+                  src="./imgs/pedra-papel-tesoura-768x245.png"
+                  class="rounded me-2 img-fluid"
+                  alt="..."
+                />
+                <strong class="me-auto">Jokenpô</strong>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="toast"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div id="toastMsg" class="toast-body"></div>
             </div>
-            <div id="toastMsg" class="toast-body"></div>
           </div>
         </div>
-      </div> 
 
-      <!-- RODAPÉ -->
-      <div class="divFooter">
-        <div id="about">
-          <h2 class="fs-5">Regras</h2>
-          <p class="fs-7">
-            <strong
-              >Caso você não saiba, jokenpô é um jogo em que as pessoas jogam
-              com as mãos, escolhendo entre pedra, papel e tesoura. <br
-            /></strong>
-            Funciona assim: a tesoura corta o papel, mas quebra com a pedra; o
-            papel embrulha a pedra, mas é cortado pela tesoura e a pedra quebra
-            a tesoura e é embrulhada pelo papel.
-          </p>
+        <!-- RODAPÉ -->
+        <div class="divFooter">
+          <div id="about">
+            <h2 class="fs-5">Regras</h2>
+            <p class="fs-7">
+              <strong
+                >Caso você não saiba, jokenpô é um jogo em que as pessoas jogam
+                com as mãos, escolhendo entre pedra, papel e tesoura. <br
+              /></strong>
+              Funciona assim: a tesoura corta o papel, mas quebra com a pedra; o
+              papel embrulha a pedra, mas é cortado pela tesoura e a pedra
+              quebra a tesoura e é embrulhada pelo papel.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -172,7 +203,10 @@
     crossorigin="anonymous"
   ></script>
   <!-- BootStrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
   <script src="./js/script.js"></script>
 </html>

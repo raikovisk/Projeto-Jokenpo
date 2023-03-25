@@ -4,8 +4,24 @@ var round = 0,
   time = 500;
 
 window.addEventListener("load", () => {
+  showBody();
+  getName();
   addEvent();
 });
+
+function showBody(){
+  setInterval(() => {
+    $("#divLoading").addClass('loading-container-hidden');
+    $("#main").removeClass('hidden');
+    $("#body").removeClass('hiddenOverflow');
+    $("#divLoading").html('');
+  }, 100);
+
+}
+
+function getName(){
+  // pegar nome do usuario
+}
 
 function addEvent() {
   $("#btnStone").bind("click", buttonClick);
@@ -135,8 +151,8 @@ function render(robo, msg) {
   switch (robo) {
     case 1: {
       img = `
-            <div class="card rounded-4">
-                <input id="btnStone" class="button btn btn-outline-dark rounded-4" src="./imgs/pedra.png" alt="punhofechado" type="image">
+            <div class="card btn btn-outline-danger rounded-4 rounded-4">
+                <input id="btnStone" src="./imgs/pedra.png" alt="punhofechado" type="image">
                 <p><strong>Pedra</strong></p>
             </div>
             `;
@@ -144,8 +160,8 @@ function render(robo, msg) {
     }
     case 2: {
       img = `
-            <div class="card rounded-4">
-                <input id="btnPapper" class="button btn btn-outline-warning rounded-4" src="./imgs/papel.png" alt="mão aberta" type="image">
+            <div class="card btn btn-outline-primary rounded-4 rounded-4">
+                <input id="btnPapper" src="./imgs/papel.png" alt="mão aberta" type="image">
                 <p><strong>Papel</strong></p>
             </div>           
             `;
@@ -153,8 +169,8 @@ function render(robo, msg) {
     }
     case 3: {
       img = `
-            <div class="card rounded-4">
-                <input id="btnSciss" class="button btn btn-outline-danger rounded-4" src="./imgs/tesoura.png" alt="dedos abertos em tesoura" type="image">
+            <div class="card btn btn-outline-warning rounded-4">
+                <input id="btnSciss" src="./imgs/tesoura.png" alt="dedos abertos em tesoura" type="image">
                 <p><strong>Tesoura</strong></p>
             </div>
             `;
