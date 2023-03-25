@@ -1,7 +1,7 @@
 var round = 0,
   roboScore = 0,
   playerScore = 0;
-  varTime = 500;
+  varTime = 300;
 
 window.addEventListener("load", () => {
   showBody();
@@ -15,7 +15,7 @@ function showBody(){
     $("#main").removeClass('hidden');
     $("#body").removeClass('hiddenOverflow');
     $("#divLoading").html('');
-  }, varTime);
+  }, 3000);
 
 }
 
@@ -49,7 +49,7 @@ function onLoading() {
   
   setTimeout(function () {
     $("#loader").addClass("hidenLoader");
-  }, time);
+  }, varTime);
 }
 
 
@@ -74,21 +74,21 @@ function buttonClick(event) {
       onLoading();
       setTimeout(() => {
         gaming(choice, robo);
-      }, time);
+      }, varTime);
       break;
     case "btnPapper":
       choice = 2;
       onLoading();
       setTimeout(() => {
         gaming(choice, robo);
-      }, time);
+      }, varTime);
       break;
     case "btnSciss":
       choice = 3;
       onLoading();
       setTimeout(() => {
         gaming(choice, robo);
-      }, time);
+      }, varTime);
       break;
   }
 }
