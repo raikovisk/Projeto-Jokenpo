@@ -27,7 +27,7 @@
   border-radius: 10px;
   padding: 0.2rem 0.5rem;
   position: fixed;
-  z-index: 3;
+  
   transition: 0.3s ease-in-out;
   flex-wrap: nowrap;
   background-color: var(--navbar-color);
